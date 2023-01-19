@@ -10,7 +10,36 @@
     <link rel="stylesheet" href="css/estilo.css">
     <title>Chuleta Quente Churrascaria</title>
 </head>
-<body>
+<body class="fundofixo">
+
+<?php include 'menu_publico.php' ?>
+    <a name="home">&nbsp;</a>
+    <main class="container bg-danger">
+        <?php include 'carousel.php'; ?>
+        <a name="destaques">&nbsp;</a>
+            <?php include 'produtos_destaque.php' ?>
+            <a name="produtos">&nbsp;</a>
+            <?php include 'produtos_geral.php' ?>
+                <footer class="panel-footer" style="background: none;">
+                    <?php include 'rodape.php' ?>
+                    <a name="contato"></a>
+                </footer>
+</main>
     
 </body>
+    <!-- link para bootstrap  -->
+    <script src="https://ajax.googleapps.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery/jquery-2.2.0.min.js" type="text/javascrpit"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function(){
+            $(".regular").slick({
+                dots: true,
+                infinity: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+        });
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick/slick.min.js"></script>
 </html>
