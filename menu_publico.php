@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Abre a barra de navegação  -->
-    <nav class="fixed navbar fixed-top navbar-light navbar-inverse">
+    <nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light">
         <div class="container-fluid">
             <!-- abre agrupamento mobile  -->
             <div class="navbar-header">
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="navbar-brand"></a>
-                    <img src="images/logo_transparente.png" width="50%" alt="Logotipo">
+                <img src="images/logo_transparente.png" width="200px" height="100px" alt="Logotipo">
             </div>
             <!-- fecha agrupamento mobile  -->
             <!-- nav direita  -->
@@ -73,7 +73,7 @@
                     <!-- fim do formulário de busca  -->
                     <li class="active">
                         <a href="admin/index.php">
-                            <span class="glyphicon gyphicon-user"></span>
+                            <span class="glyphicon gyphicon-user">Login</span>
                         </a>
                     </li>
                 </ul>
