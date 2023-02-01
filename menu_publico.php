@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="navbar-brand"></a>
-                <img src="images/logo_transparente.png" width="200px" height="100px" alt="Logotipo">
+                <img src="images/logo branca.png" width="50%" alt="Logotipo">
             </div>
             <!-- fecha agrupamento mobile  -->
             <!-- nav direita  -->
