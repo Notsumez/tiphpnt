@@ -7,3 +7,7 @@
     background-size: cover;
     -webkit-background-size: cover;
 }
+
+.cards-produtos-destaque {
+    display: flex;
+}
