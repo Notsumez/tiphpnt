@@ -17,13 +17,13 @@
 <body>
     <!-- Mostrar se a consulta retornar vazio -->
     <?php if($num_linhas == 0){ ?>
-            <h2 class="breadcumb alert-danger mt-4">
+            <h2 class="breadcrumb alert-danger mt-4">
                 Não há produtos cadastrados neste item.
             </h2>
     <?php } ?>
     <!-- Mostrar se a consulta retornou produtos -->
     <?php if($num_linhas>0){ ?>
-        <h2 class="breadcumb alert-danger">
+        <h2 class="breadcrumb alert-danger">
             <strong>Destaques</strong>
         </h2>
         <div class="row">
