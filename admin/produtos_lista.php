@@ -1,7 +1,7 @@
 <?php 
-    include 'acesso_com.php';
-    include '../conn/conect.php';
-    $lista = $conn->query("select * from vw_produtos order by asc");
+    // include 'acesso_com.php';
+    include '../conn/connect.php';
+    $lista = $conn->query("select * from vw_tbprodutos");
     $row = $lista->fetch_assoc();
     $rows = $lista->num_rows;
 ?>

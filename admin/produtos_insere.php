@@ -118,7 +118,7 @@
                             </div>
                             <br>
                             <hr>
-                            <input type="text" class="bt btn-danger btn-block" id="enviar">
+                            <input type="submit" class="bt btn-danger btn-block" id="enviar">
                         </form>
                     </div>
                 </div>
