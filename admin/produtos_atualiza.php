@@ -62,34 +62,36 @@
      <?php include 'menu_adm.php'; ?>
      <main class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-9">
                 <h2 class="breadcrumb text-danger">
                     <a href="produtos_lista.php">
                         <button class="btn btn-danger">
                             <span class="glyphicon glyphicon-chevron-left"></span>
                         </button>
                     </a>
-                    Alterando Produtos
+                    Atualizando Produtos
                 </h2>
                 <div class="thumbnail">
                     <div class="alert alert-danger" role="alert">
                         <form action="produtos_atualiza.php" method="post" name="form_produto_insere" enctype="multipart/form-data" id="form_produto_insere">
-                            <label for="id_tipo_produto">Tipo:</label>
-
+                            
                             <input type="hidden" name="id_produto" id="id_produto" value="<?php echo $row['id_produto'] ?>">
 
+                            <label for="id_tipo_produto">Tipo:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
                                 </span>
                                 <select name="id_tipo_produto" id="id_tipo_produto" class="form-control" required>
                                     <?php do { ?>
-                                        <option value="<?php echo $row_fk['id_tipo']; ?>">
+                                        <option value="<?php echo $row_fk['id_tipo']; ?>"
                                             <?php 
-                                                if(!(strcmp($row_fk['id_tipo'], $row['id_tipo_produto']))) {
-                                                    
+                                                if(!(strcmp($row_fk['id_tipo'],$row['id_tipo_produto']))){
+                                                    echo "selected=\"selected\"";
                                                 }
                                             ?>
+                                        >
+                                            <?php echo $row_fk['rotulo_tipo']; ?>
                                         </option>
                                     <?php }while($row_fk=$lista_fk->fetch_assoc()); ?>
                                 </select>
@@ -100,7 +102,7 @@
                                         <input type="radio" name="destaque_produto" id="destaque_produto" value="Sim" <?php echo $row['destaque_produto']=="Sim"?"checked":null ?>>Sim
                                 </label>
                                 <label for="destaque_produto_n" class="radio-inline">
-                                        <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" <?php echo $row['destaque_produto']=="Não"?"checked":null ?> >Não
+                                        <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" <?php echo $row['destaque_produto']=="Não"?"checked":null ?>>Não
                                 </label>
                             </div>
                             <label for="descri_produto">Descrição:</label>
@@ -108,7 +110,10 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="text" name="descri_produto" id="descri_produto" class="form-control" placeholder="Digite a descrição do Produto" maxlength="100" required>
+                                <input type="text" name="descri_produto" 
+                                id="descri_produto" class="form-control" 
+                                placeholder="Digite a descrição do Produto" 
+                                maxlength="100" value="<?php echo $row['descri_produto']; ?>">
                             </div>
                             <label for="resumo_produto">Resumo:</label>
                             <div class="input-group">
@@ -117,7 +122,7 @@
                                 </span>
                                 <textarea name="resumo_produto" id="resumo_produto" 
                                     class="form-control" placeholder="Digite o resumo do Produto" 
-                                    cols="30" rows="8" <?php echo $row['resumo_produto']; ?>></textarea>
+                                    cols="30" rows="8"required><?php echo $row['resumo_produto']; ?></textarea>
                             </div>
                             <label for="valor_produto">Valor:</label>
                             <div class="input-group">
@@ -126,13 +131,14 @@
                                 </span>
                                 <input type="number" name="valor_produto" id="valor_produto" 
                                 class="form-control" placeholder="Digite a descrição do Produto" 
-                                maxlength="100" required min="0" step="0.01">
+                                maxlength="100" required min="0" step="0.01" value="<?php echo $row['valor_produto']; ?>">
                             </div>
-                            <label for="imagem_produto_atual">Imagem Atual:</label>
-                            <img src="../images/<?php echo $row['imagem_produto']; ?>" alt="">
-                            <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['imagem_produto']; ?>">
 
-                            <label for="imagem_produto_nova">Imagem Nova:</label>
+                            <label for="imagem_produto_atual">Imagem Atual:</label>
+                            <img src="../images/<?php echo $row['imagem_produto']; ?>" class="img-responsive" alt="" srcset="">
+                            <input type="hidden" name="imagem_produto_atual" id="imagem_produto_atual" value="<?php echo $row['imagem_produto'];?>">
+
+                            <label for="imagem_produto">Imagem Nova:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
@@ -142,7 +148,7 @@
                             </div>
                             <br>
                             <hr>
-                            <input type="submit" class="bt btn-danger btn-block" id="enviar">
+                            <input type="submit" name="Atualizar" class="bt btn-danger btn-block" id="Atualizar" value="Atualizar">
                         </form>
                     </div>
                 </div>

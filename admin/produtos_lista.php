@@ -1,5 +1,5 @@
 <?php 
-    // include 'acesso_com.php';
+    include 'acesso_com.php';
     include '../conn/connect.php';
     $lista = $conn->query("select * from vw_tbprodutos");
     $row = $lista->fetch_assoc();

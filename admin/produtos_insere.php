@@ -1,5 +1,5 @@
 <?php 
-    // include 'acesso_com.php';
+    include 'acesso_com.php';
     include '../conn/connect.php';
 
 
@@ -33,7 +33,6 @@
         $lista_fk = $conn->query($consulta_fk);
         $row_fk = $lista_fk->fetch_assoc();
         $nlinhas = $lista_fk->num_rows;
-    
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +48,7 @@
      <?php include 'menu_adm.php'; ?>
      <main class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">
                 <h2 class="breadcrumb text-danger">
                     <a href="produtos_lista.php">
                         <button class="btn btn-danger">
@@ -108,7 +107,7 @@
                                 class="form-control" placeholder="Digite a descrição do Produto" 
                                 maxlength="100" required min="0" step="0.01">
                             </div>
-                            <label for="valor_produto">Valor:</label>
+                            <label for="imagem_produto">Imagem:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
@@ -118,7 +117,7 @@
                             </div>
                             <br>
                             <hr>
-                            <input type="submit" class="bt btn-danger btn-block" id="enviar">
+                            <input type="submit" name="Inserir" class="bt btn-danger btn-block" id="Inserir" value="Inserir">
                         </form>
                     </div>
                 </div>

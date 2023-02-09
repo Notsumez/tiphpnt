@@ -1,6 +1,6 @@
 <?php 
     session_name('chulettaaa');
-    if(!isset($_SESSION)) {
+    if(!isset($_SESSION)){
         session_start();
     }
     // segurança digital...

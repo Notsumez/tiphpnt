@@ -72,7 +72,7 @@ INSERT INTO `tbusuarios`
 		(1, 'senac', md5('1234'), 'sup'),
 		(2, 'joao', md5('456'), 'com'),
 		(3, 'maria', md5('789'), 'com'),
-		(4, 'iwanezuk', md5('1234'), 'sup');
+		(4, 'Andrey', md5('1234'), 'sup');
 
 -- Índices de tabela `tbtipos`
 ALTER TABLE `tbusuarios`
