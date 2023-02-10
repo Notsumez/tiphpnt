@@ -8,11 +8,12 @@
         $rotulo = $_POST['rotulo_tipo'];
 
         $id = $_POST['id_tipo']; 
+
         $updateSql = "UPDATE tbtipos
             set id_tipo = '$id_tipo',
-            sigla_tipo = '$sigla_tipo',
-            rotulo_tipo = '$rotulo_tipo'
-            where id_tipo = $id";
+            sigla_tipo = '$sigla',
+            rotulo_tipo = '$rotulo'
+            where id_tipo = $id;";
         $resultado = $conn->query($updateSql);
         if($resultado){
             header('location: tipos_lista.php');
@@ -27,12 +28,6 @@
     $lista = $conn->query("select * from tbtipos where id_tipo = $id_form");
     $row = $lista->fetch_assoc();
     $numRow = $lista->num_rows;
-
-    // Selecionar os dados de chave estrangeira (lista de tipos de produto)
-    $consulta_fk = "select * from tbtipos order by rotulo_tipo asc";
-    $lista_fk = $conn->query($consulta_fk);
-    $row_fk = $lista_fk->fetch_assoc();
-    $nlinhas = $lista_fk->num_rows;
 
 ?>
 
@@ -61,7 +56,10 @@
                 <div class="thumbnail">
                     <div class="alert alert-danger" role="alert">
                         <form action="tipos_atualiza.php" method="post" name="form_tipo_atualiza" enctype="multipart/form-data" id="form_tipo_atualiza">
-                            <label for="sigla_tipo">Sigla:</label>
+                        
+                        <input type="hidden" name="id_tipo" id="id_tipo" value="<?php echo $row['id_tipo'] ?>">
+
+                        <label for="sigla_tipo">Sigla:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
@@ -76,38 +74,13 @@
                                 <input type="text" name="rotulo_tipo" id="rotulo_tipo" class="form-control" placeholder="Digite o rotulo do Tipo" maxlength="100" value="<?php echo $row['rotulo_tipo']; ?>" required>
                             </div>
                             <br>
-                            <hr>
-                            <input type="submit" name="Alterar" class="bt btn-danger btn-block" id="Alterar" value="Alterar">
+                            
+                            <input type="submit" name="alterar" class="bt btn-danger btn-block" id="alterar" value="Alterar">
                         </form>
                     </div>
                 </div>
             </div>
         </div>
      </main>
-     <!-- script para a imagem  -->
-     <script>
-        document.getElementById("imagem_produto").onchange = function() {
-            var reader = new FileReader();
-            if(this.files[0].size>528385){
-                alert("A imagem deve ter no máximo 500KB");
-                $("#imagem").attr("src", "blank");
-                $("#imagem").hide();
-                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-            }
-            if(this.files[0].type.indexOf("image")==-1){
-                alert("Formato Inválido");
-                $("#imagem").attr("src", "blank");
-                $("#imagem").hide();
-                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-                $("#imagem_produto").unwrap();
-                return false
-            }
-            reader.onload = function(e){
-                document.getElementById("imagem").src = e.target.result
-                $("#imagem").show();
-            }
-            reader.readAsDataURL(this.files[0])
-        }
-     </script>
 </body>
 </html>

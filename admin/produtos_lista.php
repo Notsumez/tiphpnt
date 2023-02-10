@@ -117,7 +117,7 @@
         var id = $(this).data('id'); // busca o id (data-id)
         //console.log(id + ' - ' + nome); //exibe no console
         $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','produtos_excluir.php?id_produto='+id); //chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','produto_excluir.php?id_produto='+id); //chama o arquivo php para excluir o produto
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>
