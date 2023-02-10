@@ -11,3 +11,7 @@
 .cards-produtos-destaque {
     display: flex;
 }
+
+.espaco {
+    margin-top: 20px;
+}

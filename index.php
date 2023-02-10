@@ -1,5 +1,3 @@
-<?php 
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Chuleta Quente Churrascaria</title>
+    <title>Braners Carners</title>
 </head>
 <body class="fundofixo">
 
 <?php include 'menu_publico.php'; ?>
     <a name="home">&nbsp;</a>
     <main class="container bg-danger">
+        <div class=" espaco"></div>
         <?php include 'carousel.php'; ?>
         <a name="destaques">&nbsp;</a>
             <?php include 'produtos_destaque.php'; ?>

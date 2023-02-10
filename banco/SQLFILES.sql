@@ -18,3 +18,17 @@ select * from tbprodutos;
 
 -- /////////////////////////////////////////////////////////////////////////////////
 
+select * from tbusuarios;
+
+update tbprodutos set destaque_produto = 'não' where id_produto = 1;
+
+select * from tbprodutos;
+
+select * from tbtipos;
+delete from tbtipos where id_tipo = 9;
+
+select * from tbusuarios;
+
+alter table tbusuarios change column nivel_usuario nivel_usuario varchar(4);
+update tbusuarios set nivel_usuario = 'cli' where id_usuario = 3;
+
