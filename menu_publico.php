@@ -25,8 +25,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.php" class="navbar-brand"></a>
-                <img src="images/logo branca.png" width="50%" alt="Logotipo">
+                <a href="index.php" class="">
+                    <img src="images/logo branca.png" width="50%" alt="Logotipo">
+                </a>
             </div>
             <!-- fecha agrupamento mobile  -->
             <!-- nav direita  -->
