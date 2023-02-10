@@ -33,7 +33,7 @@
                         <a href="produtos_detalhes.php?id_produto=<?php echo $row_destaque['id_produto'] ?>">
                             <img src="images/<?php echo $row_destaque['imagem_produto'] ?>" class="img-responsive img-rounded">
                         </a>
-                        <div class="caption text-right">
+                        <div class="caption text-left">
                             <h3 class="text-danger">
                                 <strong><?php echo $row_destaque['descri_produto'] ?></strong>
                             </h3>

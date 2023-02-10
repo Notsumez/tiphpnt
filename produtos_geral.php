@@ -34,7 +34,7 @@ $num_linhas = $lista->num_rows;
                             <a href="produto_detalhes.php?id_produto=<?php echo $row_produtos ['id_produto']?>">
                                 <img src="images/<?php echo $row_produtos ['imagem_produto']?>" class="img-responsive img-rounded">
                             </a>
-                            <div class="caption text-right">
+                            <div class="caption text-left">
                                 <h3 class="text-danger">
                                     <strong><?php echo $row_produtos ['descri_produto']?></strong>
                                 </h3>
