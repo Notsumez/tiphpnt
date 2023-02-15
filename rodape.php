@@ -49,6 +49,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="index.php#ofertas" class="text-danger">
+                            <span class="glyphicon glyphicon-heart">&nbsp;Ofertas</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="index.php#produtos" class="text-danger">
                             <span class="glyphicon glyphicon-cutlery" aria-hidden="true">&nbsp;Produtos</span>
                         </a>

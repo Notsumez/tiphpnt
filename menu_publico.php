@@ -20,7 +20,7 @@
             <!-- abre agrupamento mobile  -->
             <div class="navbar-header">
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#menupublico" aria-expanded="false">
-                    <span class="sr-only-bar">Toggle Navigation</span>
+                    <span class="sr-only-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -40,6 +40,9 @@
                     </li>
                     <li>
                         <a href="index.php#destaques">Destaques</a>
+                    </li>
+                    <li>
+                        <a href="index.php#ofertas">Ofertas</a>
                     </li>
                     <li>
                         <a href="index.php#destaques">Produtos</a>

@@ -11,11 +11,13 @@
 
 <?php include 'menu_publico.php'; ?>
     <a name="home">&nbsp;</a>
-    <main class="container bg-danger">
-        <div class=" espaco"></div>
+    <main class="container-fluid">
+        <div class="espaco"></div>
         <?php include 'carousel.php'; ?>
         <a name="destaques">&nbsp;</a>
             <?php include 'produtos_destaque.php'; ?>
+            <a name="ofertas">&nbsp;</a>
+                <?php include 'ofertas.php';?>
             <a name="produtos">&nbsp;</a>
             <?php include 'produtos_geral.php'; ?>
                 <footer class="panel-footer" style="background: none;">

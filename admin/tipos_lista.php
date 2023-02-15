@@ -78,10 +78,10 @@
                     <h4><span class="nome text-danger"></span></h4>
                 </div>excluir o item?
                 <div class="modal-footer">
-                    <a href="#" type="button" class="btn btn-danger delete-yes">
+                    <a href="#" type="button" class="btn btn-success delete-yes">
                         Confirmar
                     </a>
-                    <button class="btn btn-success" data-dismiss="modal">
+                    <button class="btn btn-danger" data-dismiss="modal">
                         Cancelar
                     </button>
                 </div>

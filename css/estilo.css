@@ -15,3 +15,19 @@
 .espaco {
     margin-top: 20px;
 }
+
+.desfoque {
+    filter: blur(4px);
+}
+
+.fixo {
+    background: fixed;
+    display: block;
+}
+
+.fundo-ofertas {
+    background: url(../images/ofertas.png) no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+

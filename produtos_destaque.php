@@ -23,7 +23,7 @@
     <?php } ?>
     <!-- Mostrar se a consulta retornou produtos -->
     <?php if($num_linhas>0){ ?>
-        <h2 class="breadcrumb alert-danger">
+        <h2 class="breadcrumb alert-dark">
             <strong>Destaques</strong>
         </h2>
         <div class="row">
