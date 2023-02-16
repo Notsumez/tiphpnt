@@ -42,9 +42,6 @@
                         <a href="index.php#destaques">Destaques</a>
                     </li>
                     <li>
-                        <a href="index.php#ofertas">Ofertas</a>
-                    </li>
-                    <li>
                         <a href="index.php#destaques">Produtos</a>
                     </li>
                     <!-- Dropdown  -->
@@ -75,6 +72,9 @@
                         </div>
                     </form>
                     <!-- fim do formulário de busca  -->
+                    <li>
+                        <a class="vermelho" href="faca_reserva.php">Reservas</a>
+                    </li>
                     <li class="active">
                         <a href="admin/index.php">
                             <span class="glyphicon gyphicon-user">Login</span>
