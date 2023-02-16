@@ -14,8 +14,8 @@
     <title>Ofertas - Braners Carners</title>
 </head>
 <body>
+    
     <main>
-    <?php if($num_linhas>0){ ?>
         <h2 class="breadcrumb text-center alert-danger">
                 <strong>NÃO PERCA ESSA OPORTUNIDADE ÚNICA!!!</strong>
             </h2>
@@ -24,7 +24,7 @@
                 <button class="btn btn-primary position-absolute bottom-0 end-0">Clique aqui</button>
             </div>
         </div>
-        <?php }?>
+        
     </main>
 </body>
 </html>

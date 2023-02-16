@@ -17,13 +17,13 @@
         <a name="destaques">&nbsp;</a>
             <?php include 'produtos_destaque.php'; ?>
             <a name="ofertas">&nbsp;</a>
-                <?php include 'ofertas.php';?>
-            <a name="produtos">&nbsp;</a>
-            <?php include 'produtos_geral.php'; ?>
-                <footer class="panel-footer" style="background: none;">
-                    <?php include 'rodape.php'; ?>
-                    <a name="contato"></a>
-                </footer>
+            <?php include 'ofertas.php';?>
+                <a name="produtos">&nbsp;</a>
+                <?php include 'produtos_geral.php'; ?>
+                    <footer class="panel-footer" style="background: none;">
+                        <?php include 'rodape.php'; ?>
+                        <a name="contato"></a>
+                    </footer>
     </main>
     
 </body>
