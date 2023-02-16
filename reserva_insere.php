@@ -6,10 +6,12 @@
     <title>Reserva Insere</title>
 </head>
 <body>
+    <main class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-6 col-md-8">
     <h2><span class="glyphicon glyphicon-save-file"></span>Área de Pedido</h2>
         <br>
             <form action="faca_reserva_envia.php" name="form_reserva" id="form_reserva" method="post">
-                <div style="display: flex; justify-content: center;">
                     <p>
                         <span class="input-group">
                             <span class="input-group-addon" id="basic-addon1">
@@ -34,7 +36,6 @@
                             <input type="text" name="email_reserva" placeholder="Digite o seu email" aria-describedby="basic-addon1" class="form-control" required>
                         </span>
                     </p>
-                    </div>
                         <p>
                             <button class="btn btn-danger btn-block" aria-label="enviar" role="button">
                                 Enviar
@@ -42,5 +43,8 @@
                             </button>
                         </p>
                     </form>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
