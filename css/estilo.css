@@ -31,3 +31,12 @@
     height: 800px;
 }
 
+.posicao-btn {
+    padding-top: 600px;
+    padding-right: 60px;
+    text-align: end;
+}
+
+.tamanhobtn {
+    font-size: 50px;
+}

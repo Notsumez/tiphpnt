@@ -21,7 +21,7 @@
             </h2>
         <div class="fundo-ofertas position-relative">
             <div class="posicao-btn">
-                <button class="btn btn-primary position-absolute bottom-0 end-0">Clique aqui</button>
+                <button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button>
             </div>
         </div>
         <?php }?>
