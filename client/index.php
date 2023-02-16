@@ -1,12 +1,16 @@
-<h2>
-    <strong><?php echo $_GET['cliente']; ?></strong> Bem vindo à área de cliente
-</h2>
 <?php 
-    $hash64 = base64_encode('1234');
-    $md5Base = md5($hash64);
-    echo $hash64;
-    echo '<br>';
-    echo $md5Base;
-    echo '<br>';
-    echo base64_decode($hash64);
+    include '../admin/acesso_com.php';
+    include '../conn/connect.php';
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Cliente - Braners Carners</title>
+</head>
+<body>
+    
+</body>
+</html>

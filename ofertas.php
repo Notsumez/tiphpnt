@@ -21,10 +21,9 @@
             </h2>
         <div class="fundo-ofertas position-relative">
             <div class="posicao-btn">
-                <button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button>
+                <a href="../tiphpnt/client/index.php"><button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button></a>
             </div>
         </div>
-        
     </main>
 </body>
 </html>

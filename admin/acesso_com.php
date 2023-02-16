@@ -8,7 +8,7 @@
     // verificar se o usuário está logado na sessão
     if(!isset($_SESSION['login_usuario'])) {
         // se não existir, redirecionamos a sessão por segurança
-        header('location: login.php');
+        header('location: ../admin/login.php');
         exit;
     }
 
