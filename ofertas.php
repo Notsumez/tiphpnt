@@ -1,8 +1,5 @@
 <?php 
     include 'conn/connect.php';
-    $lista = $conn->query("select * from tbprodutos where id_tipo_produto = 10;");
-    $row_produtos = $lista->fetch_assoc();
-    $num_linhas = $lista->num_rows;
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -21,7 +18,7 @@
             </h2>
         <div class="fundo-ofertas position-relative">
             <div class="posicao-btn">
-                <a href="../tiphpnt/client/index.php"><button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button></a>
+                <a href="../tiphpnt/faca_reserva.php"><button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button></a>
             </div>
         </div>
     </main>
