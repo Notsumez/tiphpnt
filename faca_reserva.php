@@ -34,18 +34,57 @@
                     <br>
                     <br>
                     <div class="text-center">
-                        <a href=""><button ng-click="minhaFuncao()" class="btn btn-success position-absolute bottom-0 end-0 btn-lg"><span class="glyphicon glyphicon-thumbs-up"></span> Aceitar as regras</button></a>
+                        <div ng-show="!exibir"><button ng-click="minhaFuncao()" class="btn btn-success position-absolute bottom-0 end-0 btn-lg"><span class="glyphicon glyphicon-thumbs-up"></span> Aceitar as regras</button></div>
                     </div>
                     <br>
                     <br>
-                    <div ng-show="exibir">
-                        <p>Este é o conteúdo que será mostrado quando o botão for clicado.</p>
+                    <div ng-show="exibir" class="text-center">
+                        <hr>
+                        <h2><span class="glyphicon glyphicon-save-file"></span>Área de Pedido</h2>
+                        <br>
+                        <form action="faca_reserva_envia.php" name="form_reserva" id="form_reserva" method="post">
+                            <div style="display: flex; justify-content: center;">
+                            <p>
+                                <span class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                    </span>
+                                    <input type="text" name="nome_reserva" placeholder="Digite seu nome completo" aria-describedby="basic-addon1" class="form-control" required>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <span class="glyphicon glyphicon-qrcode"></span>
+                                    </span>
+                                    <input type="text" name="cpf_reserva" placeholder="Digite o seu CPF" aria-describedby="basic-addon1" class="form-control" required>
+                                </span>
+                            </p>
+                            <p>
+                                <span class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="text" name="email_reserva" placeholder="Digite o seu email" aria-describedby="basic-addon1" class="form-control" required>
+                                </span>
+                            </p>
+                        </div>
+                            <p>
+                                <button class="btn btn-danger btn-block" aria-label="enviar" role="button">
+                                    Enviar
+                                    <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                                </button>
+                            </p>
+                        </form>
                     </div>
                     <script>
                         var app = angular.module('meuapp',[]);
                         app.controller('controlador',function($scope){
                             $scope.exibir = false;
                         $scope.minhaFuncao = function(){
+                            $scope.exibir = !$scope.exibir;
+                            }
+                        $scope.minhaFuncao = function() {
                             $scope.exibir = !$scope.exibir;
                             }
                         });
