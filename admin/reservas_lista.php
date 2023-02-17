@@ -1,9 +1,11 @@
 <?php 
     include 'acesso_com.php';
     include '../conn/connect.php';
-    $lista = $conn->query("select * from pedido_reserva");
+    $lista = $conn->query("select * from pedido_reserva inner join status");
     $row = $lista->fetch_assoc();
     $rows = $lista->num_rows;
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +29,54 @@
                 <th>DATA DO PEDIDO</th>
                 <th>DATA DA RESERVA</th>
                 <th>STATUS</th>
+                <th>
+                    <a href="produtos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        <span class="hidden-xs">ADICIONAR MESA</span>
+                    </a>
+                </th>
             </thead>
+            <tbody> <!-- início corpo da tabela -->
+           	<!-- início estrutura repetição -->
+                <?php do { ?>
+                    <tr>
+                        <td class="hidden">
+                            <?php echo $row['id']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['nome_completo']; ?>
+                            <span class="visible-xs"></span>
+                            <span class="hidden-xs"></span>
+                        </td>
+                        <td>
+                            <?php echo $row['cpf']; ?>
+                        </td>
+                        <td>
+                            
+                            <?php echo $row['data_inicial']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['data_final']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['status']; ?>
+                        </td>
+                        <td>
+                            <a href="reserva_edita.php?id=<?php echo $row['id']; ?>" role="button" class="btn btn-warning btn-block btn-xs"> 
+                                <span class="glyphicon glyphicon-refresh"></span>
+                                <span class="hidden-xs">EDITAR</span>
+                            </a>
+                            <button 
+                                data-nome="<?php echo $row['nome_completo']; ?>" 
+                                data-id="<?php echo $row['id']; ?>"
+                                class="delete btn btn-xs btn-block btn-danger">
+                                <span class="glyphicon glyphicon-trash"></span>
+                                <span class="hidden-xs">RECUSAR</span>
+                            </button>
+                        </td>
+                    </tr>
+                <?php } while($row = $lista->fetch_assoc()) ?>
+            </tbody><!-- final corpo da tabela -->
         </table>
     </main>
     <!-- inicio do modal para excluir... -->
@@ -40,7 +89,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Deseja mesmo excluir o item?
+                    Deseja mesmo recusar o pedido?
                     <h4><span class="nome text-danger"></span></h4>
                 </div>
                 <div class="modal-footer">
@@ -63,7 +112,7 @@
         var id = $(this).data('id'); // busca o id (data-id)
         //console.log(id + ' - ' + nome); //exibe no console
         $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','produto_excluir.php?id_produto='+id); //chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','reserva_excluir.php?id='+id); //chama o arquivo php para excluir o produto
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>
