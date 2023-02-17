@@ -40,7 +40,7 @@
                     <br>
                     <div ng-show="exibir" class="text-center">
                         <hr>
-                        <?php include 'reserva_insere.php' ?>
+                        <?php include 'reserva_form.php' ?>
                     </div>
                     <script>
                         var app = angular.module('meuapp',[]);

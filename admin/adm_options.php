@@ -22,7 +22,6 @@
         <img src="../imagens/icone_produtos.png" alt="">
         <br>
         <div class="alert-danger">
-
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
                     <button class="btn btn-default disabled" role="alert" style="cursor: default;">
@@ -35,7 +34,7 @@
                 <div class="btn-group">
                     <a href="produtos_lista.php">
                         <button class="btn btn-danger">
-                            LISTAR
+                            LISTA
                         </button>
                     </a>
                 </div><!-- fecha btn-group -->
@@ -71,7 +70,7 @@
                 <div class="btn-group">
                     <a href="tipos_lista.php">
                         <button class="btn btn-warning">
-                            LISTAR
+                            LISTA
                         </button>
                     </a>
                 </div><!-- fecha btn-group -->
@@ -107,7 +106,7 @@
                 <div class="btn-group">
                     <a href="usuarios_lista.php">
                         <button class="btn btn-info">
-                            LISTAR
+                            LISTA
                         </button>
                     </a>
                 </div><!-- fecha btn-group -->
@@ -124,10 +123,38 @@
     </div><!-- fecha thumbnail -->
 </div><!-- fecha col -->
 <!-- fecha ADM USUÁRIOS -->
+</div> <!-- fecha row -->
 
+<!-- Cliente reservas  -->
+    <div class="col-sm-6 col-md-4">
+        <div class="alert-danger">
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group">
+                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
+                        PEDIDOS DE RESERVAS
+                    </button>
+                </div><!-- fecha btn-group -->
+            </div><!-- fecha btn-group-justified -->
 
-</div><!-- fecha row -->
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group">
+                    <a href="reservas_lista.php">
+                        <button class="btn btn-primary">
+                            LISTA
+                        </button>
+                    </a>
+                </div><!-- fecha btn-group -->
+                <div class="btn-group">
+                    <a href="reservas_historico.php">
+                        <button class="btn btn-primary">
+                            HISTÓRICO
+                        </button>
+                    </a>
+                </div><!-- fecha btn-group -->
+            </div><!-- fecha btn-group-justified -->
 
+        </div><!-- fecha alert-dan -->
+    </div>
 </main>    
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

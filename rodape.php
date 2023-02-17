@@ -49,8 +49,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="index.php#ofertas" class="text-danger">
-                            <span class="glyphicon glyphicon-heart">&nbsp;Ofertas</span>
+                        <a href="faca_reserva.php" class="text-danger">
+                            <span class="glyphicon glyphicon-heart">&nbsp;Reservas</span>
                         </a>
                     </li>
                     <li>

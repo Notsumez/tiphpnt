@@ -40,8 +40,7 @@ if($_POST){
     <script src="https://kit.fontawesome.com/2495680ceb.js" crossorigin="anonymous"></script>
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="../css/estilo.css" type="text/css">
-    
-    <title>Chuleta Quente - Login</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -89,11 +88,10 @@ if($_POST){
             </article>
         </section>
     </main>
-
-
+</body>
     <!-- Link arquivos Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-</body>
+
 
 </html>
