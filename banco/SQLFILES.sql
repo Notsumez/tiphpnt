@@ -34,12 +34,10 @@ update tbusuarios set nivel_usuario = 'cli' where id_usuario = 3;
 
 -- /////////////////////////////////////////////////////////////////////////////////
 
-show tables;
-
 -- Criação tabela status 
 CREATE TABLE status(
   id INT NOT NULL AUTO_INCREMENT,
-  status VARBINARY(50) NOT NULL,
+  status VARCHAR(50) NULL,
   PRIMARY KEY(id)
 );
 
@@ -47,11 +45,11 @@ CREATE TABLE status(
 CREATE TABLE pedido_reserva(
   id INT NOT NULL AUTO_INCREMENT,
   acompanhantes INT NULL,
-  cpf VARCHAR(11) NOT NULL,
+  cpf VARCHAR(14) NOT NULL,
   nome_completo VARCHAR(100) NOT NULL,
   email VARCHAR(60) NOT NULL,
   motivo_negativa VARCHAR(100) NULL,
-  data_inicial DATETIME NOT NULL,
+  data_inicial DATE NOT NULL,
   data_final DATETIME NOT NULL,
   id_status INT NOT NULL,
   PRIMARY KEY(id),
@@ -78,12 +76,20 @@ CREATE TABLE reserva(
   FOREIGN KEY(id_pedReserva) REFERENCES pedido_reserva(id)
 );
 
-desc status;
-desc reserva;
+select * from status;
+select * from pedido_reserva;
+
 desc pedido_reserva;
-desc mesa;
+desc status;
 
 drop table status;
-drop table reserva;
-drop table mesa;
 drop table pedido_reserva;
+drop table mesa;
+drop table reserva;
+
+insert into status values ('1','Confirmado');
+insert into status values ('2','Cancelado');
+insert into status values ('3','Em Análise');
+
+insert into pedido_reserva values ('1','2','400.289.221-21','jacinto leite','jleite@gmail.com','ola','2022/09/22','2022/09/27','1');
+insert into pedido_reserva values ('2','1','422.279.221-01','thomas turbando','tTurbando@gmail.com','Oi amigos','2022/09/23','2022/09/29','2');
