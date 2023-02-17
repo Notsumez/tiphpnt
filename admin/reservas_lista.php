@@ -1,11 +1,9 @@
 <?php 
     include 'acesso_com.php';
     include '../conn/connect.php';
-    $lista = $conn->query("select * from pedido_reserva inner join status");
+    $lista = $conn->query("SELECT * FROM pedido_reserva pr JOIN status s ON pr.id_status = s.id");
     $row = $lista->fetch_assoc();
     $rows = $lista->num_rows;
-
-    
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +57,17 @@
                             <?php echo $row['data_final']; ?>
                         </td>
                         <td>
-                            <?php echo $row['status']; ?>
+                            <?php 
+                                if ($row['status']=='Confirmado') { 
+                                    echo '<span class="glyphicon glyphicon-ok text-info" aria-hidden="true"></span>';
+                                }else{
+                                    if ($row['status']=='Cancelado'){
+                                        echo '<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>';
+                                    }else {
+                                        echo '<span class="glyphicon glyphicon-refresh text-success" aria-hidden="true"></span>';
+                                    }
+                                }
+                            ?> 
                         </td>
                         <td>
                             <a href="reserva_edita.php?id=<?php echo $row['id']; ?>" role="button" class="btn btn-warning btn-block btn-xs"> 
@@ -112,7 +120,7 @@
         var id = $(this).data('id'); // busca o id (data-id)
         //console.log(id + ' - ' + nome); //exibe no console
         $('span.nome').text(nome); // insere o nome do item na confirmação
-        $('a.delete-yes').attr('href','reserva_excluir.php?id='+id); //chama o arquivo php para excluir o produto
+        $('a.delete-yes').attr('href','reservas_excluir.php?id='+id); //chama o arquivo php para excluir o produto
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>
