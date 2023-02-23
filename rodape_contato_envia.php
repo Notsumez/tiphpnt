@@ -28,7 +28,7 @@
     $mail->setFrom('branerscarners@outlook.com');
     
     // Define o destinatário
-    $mail->addAddress('adahorapirola@gmail.com');
+    $mail->addAddress($_POST['email_contato'], $_POST['nome_contato']);
     
     // Conteúdo da mensagem
     $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
