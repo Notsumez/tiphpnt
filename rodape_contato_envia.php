@@ -32,9 +32,7 @@
     
     // Conteúdo da mensagem
     $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
-    $mail->Subject = 'Assunto';
-    $mail->Body    = 'Este é o corpo da mensagem <b>Olá em negrito!</b>';
-    $mail->AltBody = 'Este é o cortpo da mensagem para clientes de e-mail que não reconhecem HTML';
+    $mail->Body = $_POST['comentario_contato'];
     
     // Enviar
     $mail->send();
