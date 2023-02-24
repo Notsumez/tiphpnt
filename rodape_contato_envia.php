@@ -25,13 +25,14 @@
     $mail->Port = 587;
     
     // Define o remetente
-    $mail->setFrom('branerscarners@outlook.com');
+    $mail->setFrom('branerscarners@outlook.com', 'Braners');
     
     // Define o destinatário
-    $mail->addAddress($_POST['email_contato'], $_POST['nome_contato']);
+    $mail->addAddress('adahorapirola@gmail.com', 'Andrey');
     
     // Conteúdo da mensagem
     $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
+    $mail->Subject = 'Mensagem de: '. $_POST['nome_contato'].', email: '.$_POST['email_contato'];
     $mail->Body = $_POST['comentario_contato'];
     
     // Enviar
