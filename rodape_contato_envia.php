@@ -28,21 +28,20 @@
     $mail->setFrom('branerscarners@outlook.com', 'Braners');
     
     // Define o destinatário
-    $mail->addAddress('adahorapirola@gmail.com', 'Andrey');
+    $mail->addAddress('branerscarners@outlook.com', 'Braners Carners');
     
     // Conteúdo da mensagem
     $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
-    $mail->Subject = 'Mensagem de: '. $_POST['nome_contato'].', email: '.$_POST['email_contato'];
-    $mail->Body = $_POST['comentario_contato'];
-    
-    // Enviar
-    $mail->send();
-    echo 'A mensagem foi enviada!';
-}
+    $mail->Subject = 'Contato de: '.$_POST['nome_contato']. ' email: '. $_POST['email_contato'];
+    $mail->Body = $_POST['comentario_contato']; 
 
-catch (Exception $e)
-{
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
+        // Enviar
+        $mail->send();
+        header('location: ./index.php');
+        }
 
+        catch (Exception $e)
+        {
+            echo "Mensagem não enviada! Erro: {$mail->ErrorInfo}";
+        }
 ?>
