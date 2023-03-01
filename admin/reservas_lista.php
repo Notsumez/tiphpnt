@@ -50,8 +50,7 @@
                             <?php echo $row['cpf']; ?>
                         </td>
                         <td>
-                            
-                            <?php echo $row['data_inicial']; ?>
+                            <?php echo date('d/m/Y', strtotime($row['data_inicial'])); ?>
                         </td>
                         <td>
                             <?php echo $row['data_final']; ?>
@@ -97,8 +96,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    Deseja mesmo recusar o pedido?
-                    <h4><span class="nome text-danger"></span></h4>
+                    <h3>Enviar para <span class="nome text-danger"></span></h3>
+                    <form action="<?php $rows['email']; ?>" name="form_motivo_recusa" id="form_motivo_recusa" method="post">
+                        <textarea name="motivo_recusa" cols="30" rows="5" placeholder="Digite o motivo da recusa" aria-describedby="basic-addon3" 
+                        class="form-control" required></textarea>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <a href="#" type="button" class="btn btn-success delete-yes">

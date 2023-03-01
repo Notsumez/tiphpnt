@@ -123,7 +123,7 @@
     </div><!-- fecha thumbnail -->
 </div><!-- fecha col -->
 <!-- fecha ADM USUÁRIOS -->
-</div> <!-- fecha row -->
+
 
 <!-- Cliente reservas  -->
     <div class="col-sm-6 col-md-4">
@@ -152,7 +152,7 @@
                     </a>
                 </div><!-- fecha btn-group -->
             </div><!-- fecha btn-group-justified -->
-
+        </div> <!-- fecha row -->
         </div><!-- fecha alert-dan -->
     </div>
 </main>    

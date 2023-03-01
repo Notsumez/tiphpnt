@@ -50,8 +50,8 @@ CREATE TABLE pedido_reserva(
   email VARCHAR(60) NOT NULL,
   motivo_negativa VARCHAR(100) NULL,
   data_inicial DATE NOT NULL,
-  data_final DATETIME NOT NULL,
-  id_status INT NOT NULL,
+  data_final DATETIME NULL,
+  id_status INT NULL,
   PRIMARY KEY(id),
   FOREIGN KEY(id_status) REFERENCES status(id)
 );
@@ -90,6 +90,7 @@ drop table reserva;
 insert into status values ('1','Confirmado');
 insert into status values ('2','Cancelado');
 insert into status values ('3','Em Análise');
+insert into status values ('4','Não Visualizado');
 
 insert into pedido_reserva values ('1','2','400.289.221-21','jacinto leite','jleite@gmail.com','ola','2022/09/22','2022/09/27','1');
 insert into pedido_reserva values ('2','1','422.279.221-01','thomas turbando','tTurbando@gmail.com','Oi amigos','2022/09/23','2022/09/29','2');

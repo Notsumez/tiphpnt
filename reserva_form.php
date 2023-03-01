@@ -25,7 +25,7 @@
                             <span class="input-group-addon" id="basic-addon1">
                                 <span class="glyphicon glyphicon-qrcode"></span>
                             </span>
-                            <input type="text" name="cpf_reserva" placeholder="Digite o seu CPF" aria-describedby="basic-addon1" class="form-control" required>
+                            <input type="number" name="cpf_reserva" placeholder="Digite o seu CPF" aria-describedby="basic-addon1" class="form-control" required>
                         </span>
                     </p>
                     <p>
@@ -33,7 +33,23 @@
                             <span class="input-group-addon" id="basic-addon1">
                                 <span class="glyphicon glyphicon-envelope"></span>
                             </span>
-                            <input type="text" name="email_reserva" placeholder="Digite o seu email" aria-describedby="basic-addon1" class="form-control" required>
+                            <input type="email" name="email_reserva" placeholder="Digite o seu email" aria-describedby="basic-addon1" class="form-control" required>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </span>
+                            <input type="number" name="acompanhantes_reserva" placeholder="Digite a quantidade de acompanhantes" aria-describedby="basic-addon1" class="form-control" required>
+                        </span>
+                    </p>
+                    <p>
+                        <span class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">
+                                <span class="glyphicon glyphicon-dashboard"></span>
+                            </span>
+                            <input type="date" name="data_reserva" placeholder="Digite a data da reserva" aria-describedby="basic-addon1" class="form-control" required>
                         </span>
                     </p>
                         <p>
