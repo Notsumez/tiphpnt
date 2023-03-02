@@ -64,15 +64,15 @@
                                         echo '<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>';
                                     }else {
                                         if ($row['status']=='Em Analise'){
-                                            echo '<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>';
+                                            echo '<span class="glyphicon glyphicon-refresh text-sucess" aria-hidden="true"></span>';
                                         }else {
                                             if ($row['status']=='Não Visualizado'){
-                                                echo '<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>';
+                                                echo '<span class="glyphicon glyphicon-eye-close text-danger" aria-hidden="true"></span>';
                                             }else {
                                                 if ($row['status']=='Expirado'){
-                                                    echo '<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"></span>';
+                                                    echo '<script>$("#' . $row['id'] . '").addClass("hidden");</script>';
                                                 }else {
-                                                    echo '<span class="glyphicon glyphicon-refresh text-success" aria-hidden="true"></span>';
+                                                    echo "Erro no icone! Erro: <br> {$ErrorInfo}";;
                                                 }
                                                 
                                             }
