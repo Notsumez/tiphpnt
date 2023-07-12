@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Abre a barra de navegação  -->
-    <nav class="fixed navbar fixed-top navbar-light navbar-inverse bg-light">
+    <nav class="fixed navbar fixed-top navbar-light">
         <div class="container-fluid">
             <!-- abre agrupamento mobile  -->
             <div class="navbar-header">
@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="index.php" class="">
-                    <img src="images/logo branca.png" width="50%" alt="Logotipo">
+                    <img src="images/BRANERS.png" width="12%" style="border-radius: 50%; margin: 5px;" alt="Logotipo">
                 </a>
             </div>
             <!-- fecha agrupamento mobile  -->
@@ -34,31 +34,31 @@
             <div class="collapse navbar-collapse" id="menupublico">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="index.php">
-                            <span class="glyphicon glyphicon-home"></span>
+                        <a href="index.php" id="menupublicotxt">
+                            <span class="glyphicon glyphicon-home" ></span>
                         </a>
                     </li>
                     <li>
-                        <a href="index.php#destaques">Destaques</a>
+                        <a href="index.php#destaques"  id="menupublicotxt" style="font-size: 12pt;">Destaques</a>
                     </li>
                     <li>
-                        <a href="index.php#destaques">Produtos</a>
+                        <a href="index.php#destaques" id="menupublicotxt" style="font-size: 12pt;">Produtos</a>
                     </li>
                     <!-- Dropdown  -->
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="menupublicotxt" style="font-size: 12pt;">
                             Tipos
                             <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" id="dropdownmenup">
                             <?php foreach($rows_tipos as $row){?>
-                                <li><a href="produtos_por_tipo.php?id_tipo=<?php echo $row[0]?>"><?php echo $row[2]?></a></li>
+                                <li><a href="produtos_por_tipo.php?id_tipo=<?php echo $row[0]?>" id="menupublicotxt"><?php echo $row[2]?></a></li>
                             <?php }?>
                         </ul>
                     </li>
                     <!-- fim do Dropdown  -->
                     <li>
-                        <a href="index.php#contato">Contato</a>
+                        <a href="index.php#contato" id="menupublicotxt" style="font-size: 12pt;">Contato</a>
                     </li>
                     <!-- formulário de busca  -->
                     <form action="produtos_busca.php" method="get" name="form-busca" id="form-busca" class="navbar-form navbar-left" role="search">
@@ -73,11 +73,11 @@
                     </form>
                     <!-- fim do formulário de busca  -->
                     <li>
-                        <a class="vermelho" href="faca_reserva.php">Reservas</a>
+                        <a class="vermelho" href="faca_reserva.php" id="menupublicotxt" style="font-size: 12pt;">Reservas</a>
                     </li>
                     <li class="active">
                         <a href="admin/index.php">
-                            <span class="glyphicon gyphicon-user">Login</span>
+                            <span class="glyphicon gyphicon-user" id="menupublicotxt" style="font-size: 12pt;">Login</span>
                         </a>
                     </li>
                 </ul>
@@ -85,4 +85,14 @@
         </div>
     </nav>
 </body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 0) {
+                navbar.classList.add('navbar-fixed', 'navbar-scroll');
+            } else {
+                navbar.classList.remove('navbar-fixed', 'navbar-scroll');
+            }
+        });
+    </script>
 </html>

@@ -44,3 +44,48 @@
 .vermelho {
     background-color: rgb(148, 15, 15);
 }
+
+/* Textos do Menu Publico */
+
+#menupublicotxt{
+    color: white;
+}
+
+#menupublicotxt:hover{
+    color: black !important;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+/* Dropdown do menu publico */
+
+#dropdownmenup{
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border: 1px solid white;
+}
+
+#dropdownmenup a{
+    color: white;
+}
+
+/* Estilo para o menu fixo */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* Estilo para o fundo do menu quando o usuário rolar para baixo */
+.navbar-scroll {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background: #4d4d4d; /* Defina a cor de fundo desejada */
+}
