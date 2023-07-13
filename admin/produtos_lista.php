@@ -15,18 +15,18 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/estilo.css">
 </head>
-<body class="fundofixo"> 
+<body class="fundo_listarP"> 
     <?php include "menu_adm.php"; ?>
     <main class="container">
-        <h2 class="breadcrumb alert-danger" >Lista de Produtos </h2>
-        <table class="table table-hover table-condensed tb-opacidade bg-danger"> 
+        <h2 class="breadcrumb" id="tabela_produtos">Lista de Produtos Adicionados</h2>
+        <table class="table table-hover table-condensed tb-opacidade" id="tabela_produtos" style="border-radius: 15px;"> 
             <thead>
-                <th class="hidden">ID</th>
-                <th>TIPO</th>
-                <th>DESCRIÇÃO</th>
-                <th>RESUMO</th>
-                <th>VALOR</th>
-                <th>IMAGEM</th>
+                <th class="hidden text-center">ID</th>
+                <th class="text-center">TIPO</th>
+                <th class="text-center">NOME</th>
+                <th class="text-center">DESCRIÇÃO</th>
+                <th class="text-center">PREÇO</th>
+                <th class="text-center">IMAGEM</th>
                 <th>
                     <a href="produtos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -121,5 +121,4 @@
         $('#modalEdit').modal('show'); // chamar o modal
     });
 </script>
-
 </html>

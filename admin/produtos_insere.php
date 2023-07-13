@@ -81,29 +81,29 @@
                                         <input type="radio" name="destaque_produto" id="destaque_produto" value="Não" >Não
                                 </label>
                             </div>
-                            <label for="descri_produto">Descrição:</label>
+                            <label for="descri_produto">Nome:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                                 </span>
-                                <input type="text" name="descri_produto" id="descri_produto" class="form-control" placeholder="Digite a descrição do Produto" maxlength="100" required>
+                                <input type="text" name="descri_produto" id="descri_produto" class="form-control" placeholder="Digite o Nome do Produto" maxlength="100" required>
                             </div>
-                            <label for="resumo_produto">Resumo:</label>
+                            <label for="resumo_produto">Descrição:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                                 </span>
                                 <textarea name="resumo_produto" id="resumo_produto" 
-                                    class="form-control" placeholder="Digite o resumo do Produto" 
+                                    class="form-control" placeholder="Digite a descrição do Produto" 
                                     cols="30" rows="8" required></textarea>
                             </div>
-                            <label for="valor_produto">Valor:</label>
+                            <label for="valor_produto">Preço:</label>
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
                                 </span>
                                 <input type="number" name="valor_produto" id="valor_produto" 
-                                class="form-control" placeholder="Digite a descrição do Produto" 
+                                class="form-control" placeholder="Digite o preço do Produto" 
                                 maxlength="100" required min="0" step="0.01">
                             </div>
                             <label for="imagem_produto">Imagem:</label>
