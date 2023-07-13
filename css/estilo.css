@@ -2,11 +2,17 @@
 
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'octosquares';
+    src: url('../fonts/TT\ Octosquares\ Trial\ Light.ttf');
+}
+
 .fundofixo{
     background: url(../images/churrascaria.jpg) fixed no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
 }
+
 
 .cards-produtos-destaque {
     display: flex;
@@ -62,6 +68,10 @@
     border: 1px solid white;
 }
 
+.octosquare{
+    font-family: 'octosquares';
+}
+
 #dropdownmenup a{
     color: white;
 }
@@ -72,7 +82,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 /* Estilo para o fundo do menu quando o usuário rolar para baixo */
@@ -90,4 +100,9 @@
 
 .fundo_listarP{
     background-color: #4d4d4d;
+}
+
+.fundo_banner{
+    background: url(../images/Banner1.jpg) no-repeat;
+    background-size: cover;
 }

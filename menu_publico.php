@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Abre a barra de navegação  -->
-    <nav class="fixed navbar fixed-top navbar-light">
+    <nav class="fixed navbar fixed-top navbar-light" id="menu_publico">
         <div class="container-fluid">
             <!-- abre agrupamento mobile  -->
             <div class="navbar-header">

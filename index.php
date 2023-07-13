@@ -8,12 +8,11 @@
     <title>Braners Carners</title>
 </head>
 <body class="fundofixo">
-
-<?php include 'menu_publico.php'; ?>
-    <a name="home">&nbsp;</a>
     <main>
-        <div class="espaco"></div>
-        <?php include 'carousel.php'; ?>
+        <div class="fundo_banner">
+            <?php include 'menu_publico.php'; ?>
+            <?php include 'banner_inicio.php'; ?>
+        </div>
         <div class="container-fluid">
             <a name="destaques">&nbsp;</a>
             <?php include 'produtos_destaque.php'; ?>
