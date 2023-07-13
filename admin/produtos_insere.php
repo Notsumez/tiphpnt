@@ -4,10 +4,10 @@
 
 
     if($_POST){
-        if(isset($_POST['enviar'])){
+        if(isset($_POST['inserir'])){
             $nome_img = $_FILES['imagem_produto']['name'];
             $tmp_img = $_FILES['imagem_produto']['tmp_name'];
-            $dir_img = "../images".$nome_img;
+            $dir_img = "../images/".$nome_img;
             move_uploaded_file($tmp_img, $dir_img);
         }
         $id_tipo = $_POST['id_tipo_produto'];
@@ -125,29 +125,43 @@
         </div>
      </main>
      <!-- script para a imagem  -->
-     <script>
-        document.getElementById("imagem_produto").onchange = function() {
-            var reader = new FileReader();
-            if(this.files[0].size>528385){
-                alert("A imagem deve ter no máximo 500KB");
-                $("#imagem").attr("src", "blank");
-                $("#imagem").hide();
-                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-            }
-            if(this.files[0].type.indexOf("image")==-1){
-                alert("Formato Inválido");
-                $("#imagem").attr("src", "blank");
-                $("#imagem").hide();
-                $("#imagem_produto").wrap('<form>').closest('form').get(0).reset();
-                $("#imagem_produto").unwrap();
-                return false
-            }
-            reader.onload = function(e){
-                document.getElementById("imagem").src = e.target.result
-                $("#imagem").show();
-            }
-            reader.readAsDataURL(this.files[0])
+<script>
+  document.getElementById("imagem_produto").onchange = function() {
+    var reader = new FileReader();
+    var input = this;
+
+    if (input.files && input.files[0]) {
+      var img = new Image();
+
+      img.onload = function() {
+        if (img.width !== 5000 || img.height !== 3000) {
+          alert("A imagem deve ter a resolução de 5000x3000 pixels.");
+          resetImageInput();
+        } else {
+          reader.onload = function(e) {
+            document.getElementById("imagem").src = e.target.result;
+            $("#imagem").show();
+          }
+          reader.readAsDataURL(input.files[0]);
         }
-     </script>
+      };
+
+      img.onerror = function() {
+        alert("Formato Inválido");
+        resetImageInput();
+      };
+
+      img.src = URL.createObjectURL(input.files[0]);
+    }
+  }
+
+  function resetImageInput() {
+    $("#imagem").attr("src", "blank");
+    $("#imagem").hide();
+    $("#imagem_produto").wrap("<form>").closest("form").get(0).reset();
+    $("#imagem_produto").unwrap();
+  }
+</script>
+
 </body>
 </html>
