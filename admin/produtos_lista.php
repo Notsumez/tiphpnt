@@ -64,7 +64,7 @@
                             <?php echo number_format($row['valor_produto'],2,',','.'); ?>
                         </td>
                         <td>
-                            <img src="../images/<?php echo $row['imagem_produto']; ?>" width="100px">
+                            <img src="../images/<?php echo $row['imagem_produto']; ?>" width="100px" style="border-radius: 10px;">
                         </td>
                         <td>
                             <a href="produtos_atualiza.php?id_produto=<?php echo $row['id_produto']; ?>" role="button" class="btn btn-warning btn-block btn-xs"> 
