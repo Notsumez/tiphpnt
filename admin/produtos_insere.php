@@ -2,7 +2,6 @@
     include 'acesso_com.php';
     include '../conn/connect.php';
 
-
     if($_POST){
         if(isset($_POST['inserir'])){
             $nome_img = $_FILES['imagem_produto']['name'];
