@@ -25,12 +25,6 @@
     display: block;
 }
 
-.fundo-ofertas {
-    background: url(../images/ofertas.png) no-repeat;
-    background-size: cover;
-    height: 800px;
-}
-
 .posicao-btn {
     padding-top: 600px;
     padding-right: 60px;
@@ -87,7 +81,7 @@
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background: #4d4d4d; /* Defina a cor de fundo desejada */
+    background: #272727; /* Defina a cor de fundo desejada */
 }
 
 #tabela_produtos{

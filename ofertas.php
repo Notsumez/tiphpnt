@@ -14,12 +14,12 @@
     
     <main>
         <h2 class="breadcrumb text-center alert-danger">
-                <strong>NÃO PERCA ESSA OPORTUNIDADE ÚNICA!!!</strong>
-            </h2>
-        <div class="fundo-ofertas position-relative">
-            <div class="posicao-btn">
-                <a href="../tiphpnt/faca_reserva.php"><button class="btn btn-danger position-absolute bottom-0 end-0 btn-lg tamanhobtn">FAÇA SUA RESERVA</button></a>
-            </div>
+            <strong>NÃO PERCA ESSA OPORTUNIDADE ÚNICA!!!</strong>
+        </h2>
+        <div>
+            <a href="faca_reserva.php">
+                <img src="images/ofertas.png" alt="" style="width: 100%; height: 100%;">
+            </a>
         </div>
     </main>
 </body>
