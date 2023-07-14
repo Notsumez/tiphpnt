@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.php" class="">
+                <a href="index.php" >
                     <img src="images/BRANERS.png" width="12%" style="border-radius: 50%; margin: 5px;" alt="Logotipo">
                 </a>
             </div>
@@ -39,9 +39,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#destaques"  id="menupublicotxt" style="font-size: 12pt;">Destaques</a>
-                    </li>
-                    <li>
                         <a href="#produtos" id="menupublicotxt" style="font-size: 12pt;">Produtos</a>
                     </li>
                     <!-- Dropdown  -->
@@ -52,11 +49,14 @@
                         </a>
                         <ul class="dropdown-menu" id="dropdownmenup">
                             <?php foreach($rows_tipos as $row){?>
-                                <li><a href="produtos_por_tipo.php?id_tipo=<?php echo $row[0]?>" id="menupublicotxt"><?php echo $row[2]?></a></li>
+                            <li><a href="produtos_por_tipo.php?id_tipo=<?php echo $row[0]?>" id="menupublicotxt"><?php echo $row[2]?></a></li>
                             <?php }?>
                         </ul>
                     </li>
-                    <!-- fim do Dropdown  -->
+                        <!-- fim do Dropdown  -->
+                    <li>
+                        <a href="sobre.php"  id="menupublicotxt" style="font-size: 12pt;">Sobre</a>
+                    </li>
                     <li>
                         <a href="index.php#contato" id="menupublicotxt" style="font-size: 12pt;">Contato</a>
                     </li>
