@@ -2,7 +2,7 @@
 include 'conn/connect.php';
 $idproduto = $_GET['id_produto'];
 $lista = $conn->query("select * from vw_tbprodutos where id_produto like '%$idproduto%';");
-$row_destaque =  $lista->fetch_assoc();
+$row_detalhes =  $lista->fetch_assoc();
 $num_linhas = $lista->num_rows;
 ?>
 
@@ -28,22 +28,22 @@ $num_linhas = $lista->num_rows;
             <div class="row">
                     <div class="col-sm-6 col-md-12">
                         <div class="thumbnail">
-                            <a href="produto_detalhes.php?id_produto=<?php echo $row_destaque ['id_produto']?>">
-                                <img src="images/<?php echo $row_destaque ['imagem_produto']?>" class="img-responsive img-rounded">
+                            <a href="produto_detalhes.php?id_produto=<?php echo $row_detalhes ['id_produto']?>">
+                                <img src="images/<?php echo $row_detalhes ['imagem_produto']?>" class="img-responsive img-rounded">
                             </a>
                             <div class="caption text-left">
                                 <h3 class="text-danger">
-                                    <strong><?php echo $row_destaque ['descri_produto']?></strong>
+                                    <strong><?php echo $row_detalhes ['descri_produto']?></strong>
                                 </h3>
                                 <p class="text-warning">
-                                    <strong><?php echo $row_destaque ['rotulo_tipo']?></strong>
+                                    <strong><?php echo $row_detalhes ['rotulo_tipo']?></strong>
                                 </p>
                                 <p class="text-left">
-                                    <?php echo $row_destaque ['resumo_produto'];?>
+                                    <?php echo $row_detalhes ['resumo_produto'];?>
                                 </p>
                                 <p>
                                     <button class="btn btn-default disable" role="button" style="cursor: default">
-                                        <?php echo "R$ ".number_format($row_destaque['valor_produto'],2,",",".");?>
+                                        <?php echo "R$ ".number_format($row_detalhes['valor_produto'],2,",",".");?>
                                     </button>
                                 </p>
                             </div>
