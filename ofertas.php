@@ -18,7 +18,7 @@
         </h2>
         <div>
             <a href="faca_reserva.php">
-                <img src="images/ofertas.png" alt="" style="width: 100%; height: 100%;">
+                <img src="images/ofertas.png" id="banner_ofertas" style="width: 100%; height: 100%;">
             </a>
         </div>
     </main>

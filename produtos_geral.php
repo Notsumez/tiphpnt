@@ -24,8 +24,8 @@ $num_linhas = $lista->num_rows;
 
         <!-- mostrar se a consulta retornou produtos -->
         <?php if($num_linhas>0){?>
-            <h2 class="breadcrumb alert-dark">
-                <strong>Produtos Gerais</strong>
+            <h2 class="breadcrumb text-center" id="textoProdDes">
+                <b>Produtos Gerais</b>
             </h2>
             <div class="row">
                 <?php do{?>
@@ -35,10 +35,10 @@ $num_linhas = $lista->num_rows;
                                 <img src="images/<?php echo $row_produtos ['imagem_produto']?>" class="img-responsive img-rounded">
                             </a>
                             <div class="caption text-left">
-                                <h3 class="text-danger">
+                                <h3 style="color: #AF2319;">
                                     <strong><?php echo $row_produtos ['descri_produto']?></strong>
                                 </h3>
-                                <p class="text-warning">
+                                <p style="color: #E6B53B;">
                                     <strong><?php echo $row_produtos ['rotulo_tipo']?></strong>
                                 </p>
                                 <p class="text-left">
