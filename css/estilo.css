@@ -111,3 +111,30 @@
     background: transparent;
     color: white;
 }
+
+.txtSobre p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtSobre h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.txtSobre button{
+    font-size: 15pt;
+    color: #E6B53B; 
+    background-color: #AF2319;
+    border: 1px solid #E6B53B;
+}
+
+
+.txtSobre button:hover{
+    font-size: 15pt;
+    color: #AF2319; 
+    background-color: #E6B53B ;
+    border: 1px solid #AF2319;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
