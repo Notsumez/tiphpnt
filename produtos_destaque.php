@@ -23,8 +23,8 @@
     <?php } ?>
     <!-- Mostrar se a consulta retornou produtos -->
     <?php if($num_linhas>0){ ?>
-        <h2 class="breadcrumb alert-dark">
-            <strong>Destaques</strong>
+        <h2 class="breadcrumb text-center" id="textoProdDes">
+            <b id="destaques">Produtos em Destaque</b>
         </h2>
         <div class="row">
             <?php do { ?>
@@ -34,10 +34,10 @@
                             <img src="images/<?php echo $row_destaque['imagem_produto'] ?>" class="img-responsive img-rounded">
                         </a>
                         <div class="caption text-left">
-                            <h3 class="text-danger">
+                            <h3 style="color: #AF2319;">
                                 <strong><?php echo $row_destaque['descri_produto'] ?></strong>
                             </h3>
-                            <p class="text-warning">
+                            <p style="color: #E6B53B;">
                                 <strong><?php echo $row_destaque['rotulo_tipo'] ?></strong>
                             </p>
                             <p class="text-left">

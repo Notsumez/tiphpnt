@@ -14,7 +14,6 @@
             <?php include 'banner_inicio.php'; ?>
         </div>
         <div class="container-fluid">
-            <a name="destaques">&nbsp;</a>
             <?php include 'produtos_destaque.php'; ?>
             <a name="ofertas">&nbsp;</a>
             <?php include 'ofertas.php';?>

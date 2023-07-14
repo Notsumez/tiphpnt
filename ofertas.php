@@ -13,7 +13,7 @@
 <body>
     
     <main>
-        <h2 class="breadcrumb text-center alert-danger">
+        <h2 class="breadcrumb text-center" id="textoProdDes">
             <strong>NÃO PERCA ESSA OPORTUNIDADE ÚNICA!!!</strong>
         </h2>
         <div>

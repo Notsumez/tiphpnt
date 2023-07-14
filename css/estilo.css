@@ -106,3 +106,8 @@
     background: url(../images/Banner1.jpg) no-repeat;
     background-size: cover;
 }
+
+#textoProdDes{
+    background: transparent;
+    color: white;
+}
