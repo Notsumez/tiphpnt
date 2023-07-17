@@ -20,8 +20,8 @@
             <a name="produtos">&nbsp;</a>
             <?php include 'produtos_geral.php'; ?>
             <footer class="panel-footer" style="background: none;">
-                <?php include 'rodape.php'; ?>
                 <a name="contato"></a>
+                <?php include 'rodape.php'; ?>
             </footer>
         </div>
     </main>

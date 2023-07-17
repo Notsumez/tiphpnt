@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['buscar'])) {
     <?php if($num_linhas == 0){?>
         <h2 class="breadcrumb text-center" id="textoProdDes">Resultados para <b style="color: #AF2319;"><?php echo $termoBusca;?></b></h2>
         <p class="text-center" style="color: white; font-size: 15pt;">Este Não é um produto. Verifique a Ortografia.</p>
-        <?php }?>
-
+    <?php }?>
+    
     <?php if($num_linhas>0){?>
             <h2 class="breadcrumb text-center" id="textoProdDes">
                 <p>Resultados para <b style="color: #AF2319;"><?php echo $termoBusca;?></b></p>

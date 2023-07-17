@@ -76,7 +76,7 @@
     color: white;
 }
 
-/* Estilo para o menu fixo */
+/* menu fixo */
 .navbar-fixed {
     position: fixed;
     top: 0;
@@ -91,7 +91,7 @@
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background: #272727; /* Defina a cor de fundo desejada */
+    background: #272727;
 }
 
 #tabela_produtos{
@@ -213,4 +213,10 @@
              transform: scale(1);
     }
 }
-   
+  
+
+.btnVoltar{
+    background: transparent; 
+    backdrop-filter: blur(15px);
+    color: #AF2319;
+}

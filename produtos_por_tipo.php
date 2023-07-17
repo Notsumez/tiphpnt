@@ -16,24 +16,24 @@
     <title>busca por tipo</title>
 </head>
 <body class="fundofixo">
-    <?php include('menu_publico.php');?>
+    <?php include 'menu_publico.php';?>
     <div class="container">
         <!-- mostrar se a consulta retornar vazio -->
         <?php if($numRows == 0){?>
-            <h2 class="breadcrumb alert-danger">
-                <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+            <h2 class="breadcrumb text-center" id="textoProdDes">
+                <a href="javascript:window.history.go(-1)" class="btn btnVoltar" style="border: 1px solid white;">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                Não há produtos cadastrados deste tipo
+                Não há produtos cadastrados para o tipo selecionado.
             </h2>
         <?php }?>
         <!-- Mostrar se a consulta retornou produtos  -->
         <?php if($numRows>0){?>
-            <h2 class="breadcrumb alert-danger">
-                <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+            <h2 class="breadcrumb text-center" id="textoProdDes">
+                <a href="javascript:window.history.go(-1)" class="btn btnVoltar" style="border: 1px solid white;">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
-                <strong><?php echo $rowPorTipo['rotulo_tipo']?></strong>
+                <p>Produtos do tipo: <b style="color: #AF2319;"><?php echo $rowPorTipo['rotulo_tipo']?></b></p>
             </h2>
             <div class="row">
                 <?php do {?>

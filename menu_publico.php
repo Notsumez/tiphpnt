@@ -39,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#produtos" id="menupublicotxt" style="font-size: 12pt;">Produtos</a>
+                        <a href="index.php#produtos" id="menupublicotxt" style="font-size: 12pt;">Produtos</a>
                     </li>
                     <!-- Dropdown  -->
                     <li class="dropdown">
