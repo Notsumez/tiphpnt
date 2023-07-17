@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodapé</title>
 </head>
-<body class="fundofixo">
+<body>
     <div class="row panel-footer fundo-rodape">
         <!-- area de localização  -->
         <div class="col-sm-6 col-md-4">
@@ -59,6 +59,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="admin/sobre.php" class="text-danger">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Sobre</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="index.php#contato" class="text-danger">
                             <span class="glyphicon glyphicon-envelope" aria-hidden="true">&nbsp;Contato</span>
                         </a>
@@ -67,7 +72,6 @@
                         <a href="admin/index.php" class="text-danger">
                             <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Administração</span>
                         </a>
-                    </li>
                     </li>
                 </ul>
             </div>
