@@ -13,7 +13,7 @@
         <!-- area de localização  -->
         <div class="col-sm-6 col-md-4">
             <div class="panel-footer" style="background: none;">
-                <img src="images/logo_transparente.png" width="260px" height="132" alt="Logo pequena">
+                <img src="images/logo_transparente.png" width="350px" height="232" alt="Logo Transparente">
                 <br>
                 <i><strong>O melhor Churrasco da Zona Leste</strong></i>
                 <address>
@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="admin/sobre.php" class="text-danger">
+                        <a href="sobre.php" class="text-danger">
                             <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;Sobre</span>
                         </a>
                     </li>
