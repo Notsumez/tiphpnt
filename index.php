@@ -42,4 +42,14 @@
     });
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick/slick.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.pageYOffset > 0) {
+                navbar.classList.add('navbar-fixed', 'navbar-scroll');
+            } else {
+                navbar.classList.remove('navbar-fixed', 'navbar-scroll');
+            }
+        });
+    </script>
 </html>

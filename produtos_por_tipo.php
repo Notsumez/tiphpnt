@@ -42,7 +42,7 @@
                             <a href="produto_detalhes.php?id_produto=<?php echo $rowPorTipo['id_produto'];?>">
                                 <img src="images/<?php echo $rowPorTipo['imagem_produto'];?>" class="img-responsive img-rounded">
                             </a>
-                            <div class="caption text-right">
+                            <div class="caption">
                                 <h3 class="text-danger">
                                     <strong><?php echo $rowPorTipo['descri_produto'];?></strong>
                                 </h3>
