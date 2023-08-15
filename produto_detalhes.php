@@ -25,33 +25,42 @@ $num_linhas = $lista->num_rows;
             </a>                
             Detalhes de <b style="color: #AF2319;"><?php echo $row_detalhes['descri_produto'];?></b>
         </h2>
+        <!-- Conteúdo da página -->
         <div class="row">
             <div class="col-sm-6 col-md-12">
                 <div class="thumbnail">
                     <div style="display: flex; justify-content: center; margin: 10px;" class="octosquare">
+                        <!-- Lado esquerdo -->
                         <img src="images/<?php echo $row_detalhes ['imagem_produto']?>" class="img-responsive img-rounded" width="50%">
-                        <div class="caption text-center">
-                            <h3 style="color: #AF2319;">
-                                <strong><?php echo $row_detalhes ['descri_produto']?></strong>
-                            </h3>
-                            <p style="color: #E6B53B;">
-                                <strong><?php echo $row_detalhes ['rotulo_tipo']?></strong>
-                            </p>
-                            <p class="text-center" style="font-size: 15pt;">
-                                <?php echo $row_detalhes ['resumo_produto'];?>
-                            </p>
-                            <p>
-                                <button class="btn_Animado">
-                                    <span>Adicionar ao Churrasco</span>
-                                </button>
-                            </p>
+                        <!-- Lado direito -->
+                        <div class="caption">
+                            <!-- Borda das informações -->
+                            <div style="border: 1px solid black; border-radius: 15px; padding: 20px;">
+                                <h3 style="color: #AF2319;" class="text-center">
+                                    <strong><?php echo $row_detalhes ['descri_produto']?></strong>
+                                </h3>
+                                <p style="color: #E6B53B;" class="text-center">
+                                    <strong><?php echo $row_detalhes ['rotulo_tipo']?></strong>
+                                </p>
+                                <p class="text-center" style="font-size: 13pt;">
+                                    <?php echo $row_detalhes ['resumo_produto'];?>
+                                </p>
+                                <!-- Adiciona o item ao churrasco -->
+                                <p class="text-center">
+                                    <a href="">
+                                        <button class="btn_Animado">
+                                            <span>Adicionar ao Churrasco</span>
+                                        </button>
+                                    </a>
+                                </p>
+                                <p>
+                                    <button class="btn btn-default disable" role="button" style="cursor: default">
+                                        <?php echo "R$ ".number_format($row_detalhes['valor_produto'],2,",",".");?>
+                                    </button>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <p>
-                        <button class="btn btn-default disable" role="button" style="cursor: default">
-                            <?php echo "R$ ".number_format($row_detalhes['valor_produto'],2,",",".");?>
-                        </button>
-                    </p>
                 </div>
             </div>
         </div>

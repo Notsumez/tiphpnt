@@ -17,9 +17,8 @@ if($_POST){
         $_SESSION['login_usuario'] = $login;
         $_SESSION['login_usuario'] = $rowLogin['nivel_usuario'];
         $_SESSION['nome_da_sessao'] = session_name();
-        if($rowLogin['nivel_usuario'] =='func'){
+        if($rowLogin['nivel_usuario'] == 'sup'){
             echo "<script>window.open('index.php','_self')</script>";
-            
         }  
     else{
     echo "<script>window.open('../client/index.php?cliente=".$login."','_self')</script>";
